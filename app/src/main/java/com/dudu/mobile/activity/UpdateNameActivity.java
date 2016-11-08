@@ -33,6 +33,8 @@ public class UpdateNameActivity extends AppCompatActivity {
 
     private static final String MSG_NAMENOTNULL = "姓名不能为空!";
 
+    public static final String LOGINFO = "loginfo";
+
     private MyHandler myHandler;
 
     private LoginEntity mLoginEntity;
@@ -66,7 +68,7 @@ public class UpdateNameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_updatename);
-        mLoginEntity = (LoginEntity) getIntent().getSerializableExtra("loginfo");
+        mLoginEntity = (LoginEntity) getIntent().getSerializableExtra(LOGINFO);
         myHandler = new MyHandler(this);
         initView();
     }

@@ -357,7 +357,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 // 跳转到用户填写姓名界面 UpdateNameActivity
                                 Intent intent = new Intent(LoginActivity.this, UpdateNameActivity.class);
                                 Bundle bundle = new Bundle();
-                                bundle.putSerializable("loginfo", loginEntity);
+                                bundle.putSerializable(UpdateNameActivity.LOGINFO, loginEntity);
                                 intent.putExtras(bundle);
                                 startActivity(intent);
                             } else {
